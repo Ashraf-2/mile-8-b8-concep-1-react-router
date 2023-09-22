@@ -22,7 +22,7 @@ const Product = ({ product }) => {
     return (
         <div>
 
-            <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="w-full h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
                 <img className="p-8 rounded-t-lg" src={images[0]} alt="product image" />
                 

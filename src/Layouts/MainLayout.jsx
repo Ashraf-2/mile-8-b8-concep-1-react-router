@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 const MainLayout = () => {
     
@@ -19,13 +20,13 @@ const MainLayout = () => {
                 <nav>
                     <ul className="flex flex-row gap-5 text-xl">
                         <li>
-                            <a href="/">Home</a>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <a href="/products">Products</a>
+                            <Link to="/products">Products</Link>
                         </li>
                         <li>
-                            <a href="/dashboard">Dashboard</a>
+                            <Link to="/dashboard">Dashboard</Link>
                         </li>
                     </ul>
 
