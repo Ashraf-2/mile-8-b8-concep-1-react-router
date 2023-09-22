@@ -1,10 +1,24 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Product = ({ product }) => {
 
     const { id,brand, images,thumbnile,description,price,category, stock, title } = product || {}
-    console.log(product);
+    // console.log(product);
+    const navigate = useNavigate();
+
+    const handleShow= () =>{
+        console.log('click details');
+        const user = false;
+
+        if(user){
+            navigate(`/products/${id}`);
+        }
+        else{
+            navigate('/');
+        }
+
+    }
     return (
         <div>
 
@@ -42,7 +56,8 @@ const Product = ({ product }) => {
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">${price}</span>
                         
-                        <Link to={`/products/${id}`} className="text-white bg-sky-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 md:py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Details</Link>
+                        {/* <Link to={`/products/${id}`} className="text-white bg-sky-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 md:py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Details</Link> */}
+                        <button className="py-1 px-5 bg-sky-400 hover:shadow-lg rounded-lg text-white text-xl" onClick={handleShow}>Details</button>
                         
                     </div>
                 </div>
